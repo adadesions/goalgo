@@ -40,3 +40,13 @@ func TestPush(t *testing.T) {
 		}
 	}
 }
+
+func TestSeek(t *testing.T) {
+	s := Stack{Data: []int{1, 2, 3}}
+	want := 3
+	got := s.seek()
+
+	if want != got {
+		t.Fatalf("want %d but got %d", want, got)
+	}
+}
