@@ -4,7 +4,7 @@ type Stack struct {
 	Data []int
 }
 
-func (s *Stack) pop() int {
+func (s *Stack) Pop() int {
 	lastIdx := len(s.Data) - 1
 	ele := s.Data[lastIdx]
 	s.Data = s.Data[:lastIdx]
@@ -12,12 +12,12 @@ func (s *Stack) pop() int {
 	return ele
 }
 
-func (s *Stack) push(data int) []int {
+func (s *Stack) Push(data int) []int {
 	s.Data = append(s.Data, data)
 
 	return s.Data
 }
 
-func (s *Stack) seek() int {
+func (s *Stack) Seek() int {
 	return s.Data[len(s.Data)-1]
 }
