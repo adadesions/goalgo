@@ -13,7 +13,7 @@ func Fibo(n int) int {
 
 func Fibo2(n int) int {
 	// Memoization Technique
-	f := [1000]int{}
+	f := [100]int{}
 
 	if n == 0 || n == 1 {
 		return 1
@@ -105,7 +105,7 @@ func search(left, right, target int, data []int) bool {
 	if left > right {
 		return false
 	}
-	
+
 	if data[mid] == target {
 		return true
 	}
